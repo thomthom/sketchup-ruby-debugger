@@ -877,10 +877,12 @@ IDebugServer::VariablesVector Server::GetGlobalVariables() const {
 }
 
 IDebugServer::VariablesVector Server::GetLocalVariables() const {
+  // https://github.com/ruby-debug/ruby-debug-ide/blob/6d864edbd0cf6f3a2fe0374720ae15fbd0d16ff5/lib/ruby-debug-ide/commands/variables.rb#L128
   return GetVariables("local_variables", false);
 }
 
 IDebugServer::VariablesVector Server::GetInstanceVariables(size_t object_id) const {
+  // https://github.com/ruby-debug/ruby-debug-ide/blob/6d864edbd0cf6f3a2fe0374720ae15fbd0d16ff5/lib/ruby-debug-ide/commands/variables.rb#L71
   VariablesVector vec;
   VALUE var_array = rb_obj_instance_variables(object_id);
   size_t num_vars = RARRAY_LEN(var_array);

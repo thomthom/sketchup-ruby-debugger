@@ -20,7 +20,7 @@ struct Variable {
   Variable() : has_children(false), object_id(0) {}
 
   std::string name;
-  std::string type;
+  std::string type; // Class name of variable instance
   std::string value;
   bool has_children;
   size_t object_id;

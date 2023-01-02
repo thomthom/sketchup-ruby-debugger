@@ -13,7 +13,7 @@
 
 namespace SketchUp {
 namespace RubyDebugger {
-// http://debug-commons.rubyforge.org/#ruby-debug-ide
+// https://github.com/ruby-debug/ruby-debug-ide/blob/master/protocol-spec.md#Variables
 // ruby-debug-ide protocol implementation.
 class RDIP : public IDebuggerUI {
 public:
